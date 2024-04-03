@@ -7,10 +7,9 @@ import sCheddar from './assets/cheese/sharpcheddar.jpg';
 import gouda from './assets/cheese/gouda.jpg';
 import brie from './assets/cheese/brie.jpg';
 
-//import firebase from 'firebase/app';
-//import 'firebase/database';
+import firebase from 'firebase/app';
+import 'firebase/database';
 
-/*
 const firebaseConfig = {
   apiKey: "AIzaSyAAIJLkr2wjGCZ6ZayS7VRthZyzlq1fsv0",
   authDomain: "cheese-review.firebaseapp.com",
@@ -20,10 +19,9 @@ const firebaseConfig = {
   appId: "1:981889231452:web:622bbeb55fafb25d1f5499",
   measurementId: "G-5ZEPVVJ6VP"
 };
- */
 
-//firebase.initializeApp(firebaseConfig);
-//const database = firebase.database();
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
 let cheeses = {
   1: [swiss,"Swiss Cheese"],
@@ -34,10 +32,10 @@ let cheeses = {
   6: [brie,"Brie Cheese"]
 }
 
-// const randomKey = Object.keys(cheeses)[Math.floor(Math.random() * Object.keys(cheeses).length)];
+const randomKey = Object.keys(cheeses)[Math.floor(Math.random() * Object.keys(cheeses).length)];
 
-// let cheese = cheeses[randomKey];
-let cheese = cheeses[1];
+let cheese = cheeses[randomKey];
+//let cheese = cheeses[1];
 let cheesePath = cheese[0];
 let cheeseName = cheese[1];
 
@@ -46,7 +44,7 @@ function App() {
     window.location.reload();
   }
 
-  /*
+
   const saveCheese = (cheeseName, rating) => {
       const cheeseRef = database.ref('cheeses').push();
       cheeseRef.set({
@@ -54,7 +52,7 @@ function App() {
           rating: rating,
       });
   };
-   */
+
 
   function completedPage(rating) {
     let completeWindow = document.getElementById("CompleteWindow");
@@ -62,7 +60,7 @@ function App() {
     completeWindow.style.display = "block";
     rateWindow.style.display = "none";
     console.log(rating);
-    //saveCheese(cheeseName,rating);
+    saveCheese(cheeseName,rating);
   }
 
   return (
