@@ -1,20 +1,8 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 .App-header {
-  background-color: #282c34;
+  background-color: #171717;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +12,168 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#CompleteWindow {
+  padding: 30px;
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#RateBox {
+  display: block;
+}
+
+.Main {
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
+
+  /* mainbox */
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.3);
+
+  width: fit-content;
+  height: fit-content;
+  /*
+  width: 490px;
+  height: 489px;
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  overflow: clip;
+}
+
+.HeadImgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  height: 200px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.HeadImg {
+  height: calc(100% - 10px);
+  width: calc(100% - 20px);
+  object-fit: cover;
+  border-radius: 10px;
+  align-content: center;
+  background-color: rgba(255,255,255,0.05);
+
+  box-shadow: 0 0 100px 0 #1E1E1E inset;
+}
+.BodyContainer {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  padding: 0 20px 20px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.BodyTitle {
+  width: calc(100% - 40px);
+  height: 100%;
+  padding: 0;
+}
+.TodaysCheese {
+  color: #FFF;
+
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 440px;
+  height: 10px;
+  align-content: center;
+}
+.SubCheese {
+  color: rgba(255, 255, 255, 0.50);
+
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  width: 440px;
+}
+.RatingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: calc(100% - 40px);
+  height: fit-content;
+}
+.RestartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: calc(100% - 40px);
+  height: fit-content;
+}
+.p {
+  width: 100%;
+  color: #FFF;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+}
+.RatingBar {
+  display: flex;
+  width: 440px;
+  height: 60px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(18, 18, 18, 0.50);
+}
+.BtnRating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  color: #FFF;
+  background-color: rgba(255,255,255,0);
+  border-radius: 4px;
+  /* regular */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+  gap: 10px;
+  border-style: none;
+  text-justify: none;
+  text-align: center;
+}
+.BtnRatingText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  color: #FFF;
+  background-color: rgba(255,255,255,0);
+  border-radius: 4px;
+  /* regular */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+  gap: 10px;
+  border-style: none;
+  text-justify: none;
+  text-align: center;
+}
+.BtnRating:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+* {
+  font-family: Inter, Roboto, Ubuntu, BlinkMacSystemFont, "Segoe UI", Arial, SansSerif, serif;
 }
