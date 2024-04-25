@@ -20,8 +20,8 @@ const firebaseConfig = {
   measurementId: "G-5ZEPVVJ6VP"
 };
 
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+//firebase.initializeApp(firebaseConfig);
+//const database = firebase.database();
 
 let cheeses = {
   1: [swiss,"Swiss Cheese"],
@@ -44,13 +44,14 @@ function App() {
     window.location.reload();
   }
 
-
+  /*
   const saveCheese = (cheeseName, rating) => {
       const cheeseRef = database.ref('cheeses').push();
       cheeseRef.set({
           name: cheeseName,
           rating: rating,
       });
+   */
   };
 
 
@@ -60,7 +61,7 @@ function App() {
     completeWindow.style.display = "block";
     rateWindow.style.display = "none";
     console.log(rating);
-    saveCheese(cheeseName,rating);
+    //saveCheese(cheeseName,rating);
   }
 
   return (
