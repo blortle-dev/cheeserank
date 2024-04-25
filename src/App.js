@@ -52,7 +52,7 @@ function App() {
           rating: rating,
       });
    */
-  };
+  }
 
 
   function completedPage(rating) {
