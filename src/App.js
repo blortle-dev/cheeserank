@@ -51,8 +51,8 @@ function App() {
           name: cheeseName,
           rating: rating,
       });
-   */
   }
+   */
 
 
   function completedPage(rating) {
@@ -62,7 +62,7 @@ function App() {
     rateWindow.style.display = "none";
     console.log(rating);
     //saveCheese(cheeseName,rating);
-  }
+    }
 
   return (
       <div className="App">
